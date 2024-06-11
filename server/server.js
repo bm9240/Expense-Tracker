@@ -6,8 +6,6 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/connectDB');
 const config = require('config');
 
-// Configure the dotenv file
-dotenv.config();
 
 // Connect to the database
 require('dotenv').config();
