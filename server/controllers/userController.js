@@ -1,6 +1,5 @@
 const userModel = require('../models/UserModel');
 const jwt = require('jsonwebtoken');
-const config = require('config');
 
 const loginController = async (req, res) => {
     try {
