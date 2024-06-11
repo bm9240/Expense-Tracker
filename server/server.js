@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const colors = require('colors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/connectDB');
-const config = require('config');
+
 
 
 connectDB();
