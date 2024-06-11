@@ -10,7 +10,7 @@ const config = require('config');
 dotenv.config();
 
 // Connect to the database
-connectDB();
+require('dotenv').config();
 
 // Initialize the express application
 const app = express();
