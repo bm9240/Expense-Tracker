@@ -4,11 +4,11 @@ const jwt = require('jsonwebtoken');
 const loginController = async (req, res) => {
     try {
         const { email, password } = req.body;
-        console.log("Received login request:", { email, password }); // Debugging statement
+        console.log("Received login request:", { email, password }); 
 
         // Find the user by email and password
         const user = await userModel.findOne({ email, password });
-        console.log("User found:", user); // Debugging statement
+        console.log("User found:", user); 
 
         if (!user) {
             return res.status(404).json({ success: false, message: "User Not Found or Invalid Credentials" });
