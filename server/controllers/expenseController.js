@@ -10,7 +10,7 @@ const addExpense = async (req, res) => {
             date: req.body.date,
             category: req.body.category,
             description: req.body.description,
-            userId: req.user._id // Ensure this is coming from the middleware
+            userId: req.user._id 
         });
         
         const expense = await newExpense.save();
