@@ -8,20 +8,19 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
-    console.log("Form submitted"); // Debugging statement
-    const values = { email, password }; // Gather form values
-    console.log("Values: ", values); // Debugging statement
-
+    e.preventDefault(); 
+    console.log("Form submitted"); 
+    const values = { email, password }; 
+    console.log("Values: ", values); 
     try {
-      const response = await axios.post('/users/login', values); // Send data to backend
+      const response = await axios.post('/users/login', values);
       const { token } = response.data;
-      console.log("Response: ", response); // Debugging statement
+      console.log("Response: ", response); 
       alert("Login Successful");
       localStorage.setItem('token', token);
       navigate('/'); // Navigate to home page after successful login
     } catch (error) {
-      console.error("Error: ", error); // Debugging statement
+      console.error("Error: ", error); 
       alert("Invalid credentials or an error occurred");
     }
   };
