@@ -9,18 +9,17 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
-    console.log("Form submitted"); // Debugging statement
-    const values = { name, email, password }; // Gather form values
-    console.log("Values: ", values); // Debugging statement
-
+    e.preventDefault(); 
+    console.log("Form submitted");
+    const values = { name, email, password }; 
+    console.log("Values: ", values); 
     try {
-      const response = await axios.post('/users/register', values); // Send data to backend
-      console.log("Response: ", response); // Debugging statement
+      const response = await axios.post('/users/register', values); 
+      console.log("Response: ", response); 
       alert("Registration Successful");
-      navigate('/login'); // Navigate to login page after successful registration
+      navigate('/login'); 
     } catch (error) {
-      console.error("Error: ", error); // Debugging statement
+      console.error("Error: ", error);
       alert("Invalid credentials or an error occurred");
     }
   };
